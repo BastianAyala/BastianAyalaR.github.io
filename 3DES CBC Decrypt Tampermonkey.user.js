@@ -7,6 +7,7 @@
 // @author       Bastán Ayala
 // @match        https://www.tampermonkey.net/index.php?version=4.11&ext=dhdg&updated=true
 // @grant        none
+//updateURL
 // @require      https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js
 // @require      https://raw.githubusercontent.com/brix/crypto-js/develop/src/tripledes.js
 // ==/UserScript==
