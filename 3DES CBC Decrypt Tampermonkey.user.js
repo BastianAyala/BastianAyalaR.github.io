@@ -25,7 +25,7 @@
         return decrypted;
     }
     
-    var text = "lS6WrnuACc4yKqTZXulRgpOzAkZ2xTk1A8wQs1eMnoQ=";
+    var text = "3Hsku/b7T3AD+3XfVU1etw==";
     /*
     var ivHex = CryptoJS.enc.Hex.parse(CryptoJS.enc.Utf8.parse(iv).toString(CryptoJS.enc.Hex));
 
