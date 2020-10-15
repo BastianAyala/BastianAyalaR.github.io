@@ -13,41 +13,47 @@
 
 (function decryp() {
     'use strict';
-    //https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/tripledes.js
-
+    
     var key = "llavedesllavedesllavedes";//24
     var iv ="12345678";//8
 
     function decryptByDES(ciphertext, key, iv) {
         var keyHex = CryptoJS.enc.Utf8.parse(key);
-
         var ivHex = CryptoJS.enc.Hex.parse(CryptoJS.enc.Utf8.parse(iv).toString(CryptoJS.enc.Hex));
         var decrypted = CryptoJS.DES.decrypt(ciphertext, keyHex, { iv: ivHex, mode: CryptoJS.mode.CBC });
-
-        console.log( decrypted.toString());
-        console.log( decrypted.ciphertext.toString(CryptoJS.enc.Base64));
-        console.log( decrypted.ciphertext.toString());
-
-        return decrypted.toString(CryptoJS.enc.Utf8);
-
+        return decrypted;
     }
+    
+    var text = "lS6WrnuACc4yKqTZXulRgpOzAkZ2xTk1A8wQs1eMnoQ=";
+    /*
+    var ivHex = CryptoJS.enc.Hex.parse(CryptoJS.enc.Utf8.parse(iv).toString(CryptoJS.enc.Hex));
 
+    const str = CryptoJS.enc.Utf8.parse(text);
+    const baseStr = CryptoJS.enc.Base64.stringify(str);
+    const baseStrUtf = CryptoJS.enc.Utf8.parse(baseStr);
+    const KeyHex = CryptoJS.enc.Utf8.parse(key);
 
+    var Dencrypted = CryptoJS.TripleDES.decrypt(baseStrUtf, KeyHex, {
+	iv:ivHex,
+	mode: CryptoJS.mode.CBC,
+	padding: CryptoJS.pad.Pkcs7}
+);
+*/
     function obtenerDiv(){
         return document.getElementsByTagName("div");}
 
-    setTimeout(obtenerDiv,500);
+    setTimeout(obtenerDiv,1000);
     var div = obtenerDiv();
     console.log(div);
 
-    //const ide = div.id;
+    //const ide = div[0].id;
     //console.log(ide);
-    var text = "lS6WrnuACc4yKqTZXulRgpOzAkZ2xTk1A8wQs1eMnoQ=";
 
+    var r = decryptByDES(text,key, iv);
+    console.log(r);
+    r = r.toString(CryptoJS.enc.Utf8)
+    console.log(r);
 
-    var result = decryptByDES(text, key,iv);
-    console.log(result);
-    //div.innerHTML = result;
-
+    //div.innerHTML = r;
 
 })();
