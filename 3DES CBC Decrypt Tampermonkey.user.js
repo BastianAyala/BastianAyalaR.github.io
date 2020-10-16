@@ -20,7 +20,7 @@
     function decryptByDES(ciphertext, key, iv) {
         var keyHex = CryptoJS.enc.Utf8.parse(key);
         var ivHex = CryptoJS.enc.Hex.parse(CryptoJS.enc.Utf8.parse(iv).toString(CryptoJS.enc.Hex));
-        var decrypted = CryptoJS.DES.decrypt(ciphertext, keyHex, { iv: ivHex, mode: CryptoJS.mode.CBC, padding:CryptoJS.pad.Pkcs7 });
+        var decrypted = CryptoJS.TripleDES.decrypt(ciphertext, keyHex, { iv: ivHex, mode: CryptoJS.mode.CBC, padding:CryptoJS.pad.Pkcs7 });
         return decrypted;
     }
     
