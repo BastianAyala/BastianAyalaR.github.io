@@ -2,10 +2,9 @@
 // @name         3DES CBC Decrypt
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @include      https://htmlpreview.github.io/?https://github.com/BastianAyala/Tarea3Criptograf-a/blob/main/encode.html
 // @description  Desencriptar un codigo cifrado en python
 // @author       Bastán Ayala
-// @match        https://www.tampermonkey.net/index.php?version=4.11&ext=dhdg&updated=true
+// @match        https://htmlpreview.github.io/?https://github.com/BastianAyala/Tarea3Criptograf-a-/blob/main/encode.html
 // @grant        none
 //updateURL
 // @require      https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js
