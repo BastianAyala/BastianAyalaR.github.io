@@ -16,6 +16,6 @@ html ="""
 <div class='tripleDES' id='"""+cifrado+"""'></div>
 """
 
-archivo = open("encode.html","w")
+archivo = open("index.html","w")
 archivo.write(html)
 archivo.close()
