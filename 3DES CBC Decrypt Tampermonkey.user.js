@@ -28,7 +28,7 @@
     var idTextoCifrado = div[0].id;
 
     var result = decryptByDES(idTextoCifrado,key, iv);
-    result = result.toString(CryptoJS.enc.Utf8)
+    result = result.toString(CryptoJS.enc.Utf8);
 
     div[0].innerHTML = 'mensaje cifrado: '+result;
 })();
