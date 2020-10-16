@@ -6,7 +6,7 @@ iv =b"12345678"
 key = DesKey(b"llavedesllavedesllavedes")
 key.is_triple();
 
-cifrado = key.encrypt(b'mensajes', initial=iv, padding=True)
+cifrado = key.encrypt(data, initial=iv, padding=True)
 
 iv = b64encode(iv).decode('utf-8')
 cifrado = b64encode(cifrado).decode('utf-8')
