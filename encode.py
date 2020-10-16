@@ -1,7 +1,5 @@
 from des import DesKey
 from base64 import b64encode
-from Crypto.Cipher import DES3
-from Crypto.Util.Padding import pad
 
 data = b'mensajes'
 iv =b"12345678"
