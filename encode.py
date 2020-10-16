@@ -4,7 +4,7 @@ from base64 import b64encode
 data = b'mensajes'
 iv =b"12345678"
 key = DesKey(b"llavedesllavedesllavedes")
-key.is_triple();
+key.is_triple()
 
 cifrado = key.encrypt(data, initial=iv, padding=True)
 
